@@ -2,6 +2,7 @@
 
 python3.x：https://www.python.org/getit/
 
+pip：https://pypi.org/project/pip/#files
 
 pycharm：https://www.jetbrains.com/pycharm/download/#section=windows
 
