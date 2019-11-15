@@ -38,3 +38,16 @@ data = pd.read_csv(path,names=['Population', 'Profit'])
 data.plot(x='Population',y='Profit',kind="scatter",figsize=(12, 8))
 plt.show()
 
+# 正弦函数
+# 0~2pi 增长0.01
+x = np.arange(0,2*np.pi,0.01)
+y = np.sin(x)
+plt.plot(x,y)
+plt.show();
+
+# 正弦函数
+# 0~2pi 增长0.01
+x = np.arange(0,2*np.pi,0.01)
+y = np.cos(x)
+plt.plot(x,y)
+plt.show();

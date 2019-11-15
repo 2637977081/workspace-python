@@ -76,6 +76,7 @@ m1=np.array([[1,2,3],[4,5,6]])
 m2=np.array([[4,5],[6,1],[2,3]])
 print(m1.shape[1]==m2.shape[0])#矩阵点乘要求，列=行
 print("m1*m2 点乘:%s" %(np.dot(m1,m2)))
+print("m1*m2 点乘:%s" % (m1 @ m2))
 
 
 m1=np.array([[1,2,3],[4,5,6]])
