@@ -46,7 +46,7 @@ y = get_y(data)
 
 
 def normalize_feature(df):
-    print("--------特征值缩放 X(n)=(X(n)-U(n))/S(n)---------")
+    print("--------特征值缩放 X(n)=(X(n)-U(n))/S(n)---mean:平均值---std:标准差---")
     return df.apply(lambda column: (column - column.mean()) / column.std())
 
 
@@ -102,6 +102,7 @@ def batch_gradient_decent(theta, X, y, epoch, alpha=0.01):
     cost_data = [lr_cost(theta, X, y)]  # 存储变化的特征函数
     _theta = theta.copy()  # 拷贝一份，不和原来的theta混淆
     for _ in range(epoch):
+        print('_theta %s:' %_theta)
         _theta = _theta - alpha * gradient(_theta, X, y)
         cost_data.append(lr_cost(_theta, X, y))
 
