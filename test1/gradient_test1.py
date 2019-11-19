@@ -81,7 +81,7 @@ def lr_cost(theta, X, y):
     #     """
     m = X.shape[0]  # 样本数
     inner = X @ theta - y  # R(m*1)
-    square_sum = inner.T @ inner  # 平方和
+    square_sum = inner.T @ inner  # 平方和等价于 square_sum = np.power(inner, 2)
     cost = square_sum / (2 * m)
     return cost
 
