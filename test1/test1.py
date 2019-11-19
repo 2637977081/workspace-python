@@ -118,7 +118,7 @@ print(cost_data)
 final_cost = lr_cost(final_theta, X, y)
 print('最终代价：%s' % final_cost)
 plt.plot(cost_data)
-plt.show();
+plt.show()
 
 
 b = final_theta[0]  # intercept，Y轴上的截距
