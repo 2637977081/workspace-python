@@ -3,6 +3,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
+# 梯度下降算法二维计算
+
 sns.set(context="notebook", style="whitegrid", palette="dark")
 
 # 样本文件路径

@@ -6,6 +6,8 @@ import seaborn as sns
 
 sns.set(context="notebook", style="whitegrid", palette="dark")
 
+# 梯度下降算法三维测试
+
 # 样本文件路径
 path = '.\\resources\\ex1data2.txt'
 # names添加列名
