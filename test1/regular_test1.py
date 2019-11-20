@@ -5,11 +5,11 @@ import seaborn as sns
 
 # 使用正规方程解决线性回归
 path = '.\\resources\\ex1data1.txt'
-data = pd.read_csv(path)
+data = pd.read_csv(path,names=['Population', 'Profit'])
 
 
 def get_X(df):
-    ones = pd.DataFrame({"ones":np.zeros(df.shape[0])})
+    ones = pd.DataFrame({"ones":np.ones(df.shape[0])})
     data = pd.concat([ones,df],axis=1)
     return np.array(data.iloc[:,:-1])
 
@@ -25,11 +25,17 @@ y = get_y(data)
 
 
 def regular(X,y):
-    return np.linalg.inv(X.T@X)@X.T@y
+    theta = np.linalg.inv(X.T @ X) @ X.T @ y
+    return theta
 
 
 theta  = regular(X,y)
 print(theta)
+
+plt.scatter(data.Population, data.Profit, label="Training data")
+plt.plot(data.Population, data.Population*theta[1] + theta[0], label="Prediction")
+plt.legend(loc=2)
+plt.show()
 
 
 
