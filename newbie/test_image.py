@@ -1,6 +1,6 @@
 import cv2
 
-input_image_path='..\\resources\\images\\20191122154050.png'
+input_image_path='..\\resources\\images\\yaojing.png'
 # input_image_path='..\\resources\\images\\28625390.jpg'
 
 img_rgb = cv2.imread(input_image_path)
@@ -14,5 +14,5 @@ img_edge = cv2.adaptiveThreshold(img_gray, 255,
                                  cv2.THRESH_BINARY, blockSize=3, C=2)
 
 
-output_image_path='..\\resources\\images\\20191122154050-1.png'
+output_image_path='..\\resources\\images\\yaojing1.png'
 cv2.imwrite(output_image_path, img_edge)
